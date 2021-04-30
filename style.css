@@ -1,0 +1,155 @@
+:root {
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+    --light-grayish-blue: hsl(240, 5%, 91%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(var(--soft-violet), var(--soft-blue));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 0.75rem;
+}
+
+.faq {
+    margin: 10rem 1.5rem;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-height: 509px;
+}
+
+.faq__bg__container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+}
+
+.faq__list {
+    padding: 1rem;
+    position: relative;
+    justify-self: flex-end;
+}
+
+.faq__list h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.faq__list h5 {
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+.faq__list p {
+    color: var(--dark-grayish-blue);
+    margin-top: .5rem;
+    line-height: 1.5;
+}
+
+.faq__list ul {
+    list-style: none;
+}
+
+.faq__list ul li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--light-grayish-blue);
+}
+
+.faq__bg {
+    background: url("images/illustration-woman-online-mobile.svg") no-repeat;
+    width: 266px;
+    height: 196px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-55%, -55%);
+}
+
+.faq__bg__box {
+    display: none;
+}
+
+.faq__bg__shadow {
+    background: url("images/bg-pattern-mobile.svg") no-repeat;
+    width: 240px;
+    height: 104px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+@media only screen and (min-width: 900px) {
+
+    .faq {
+        max-width: 920px;
+        margin: 1rem 3rem;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .faq__list {
+        padding-right: 5rem;
+        width: 50%;
+    }
+
+    .faq__list h1 {
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    .faq__bg__container {
+        overflow: hidden;
+    }
+
+    .faq__bg {
+        background: url("images/illustration-woman-online-desktop.svg") no-repeat;
+        width: 472px;
+        height: 358px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-85px, -50%);
+        z-index: 1;
+    }
+
+    .faq__bg__box {
+        display: block;
+        width: 191px;
+        height: 184px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background: url("images/illustration-box-desktop.svg") no-repeat;
+        transform: translate(-50%, -25%); 
+        z-index: 2;
+    }
+    
+    .faq__bg__shadow {
+        background: url("images/bg-pattern-desktop.svg") 100% no-repeat;
+        width: 964px;
+        height: 944px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-60%, -31%);
+    }
+}
