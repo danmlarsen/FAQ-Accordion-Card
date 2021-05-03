@@ -159,13 +159,13 @@ body {
     .faq__inner {
         margin: 0;
         margin-top: 5rem;
-        padding-right: 5rem;
+        padding-right: 6rem;
         width: 50%;
     }
 
     .faq__title {
         text-align: left;
-        margin-bottom: 1rem;
+        margin-bottom: 1.25rem;
     }
 
     .faq__question {
