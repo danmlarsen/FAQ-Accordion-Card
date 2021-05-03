@@ -1,8 +1,8 @@
-const questions = document.querySelectorAll('.faq__list__accordion');
+const buttons = document.querySelectorAll('.faq__inner__button');
 
-questions.forEach(question => {
-    question.addEventListener('click', e => {
-        const listItem = question.parentElement;
+buttons.forEach(btn => {
+    btn.addEventListener('click', e => {
+        const listItem = btn.parentElement;
         listItem.classList.toggle('active');
     });
 });
